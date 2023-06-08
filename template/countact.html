@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='contact.css')}}">
+</head>
+<body>
+	<header>
+		<h1>Contact Us</h1>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/SHOP">Shop</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="contact.html" class="active">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Get in Touch</h2>
+			<form method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+
+				<input type="submit" value="Send">
+			</form>
+		</section>
+		<section>
+			<h2>Our Location</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=cXZyrGNy6Y9w8hLr5" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<p>123 Main St<br>Los Angeles, CA 90001<br>United States</p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Ecommerce Website. All rights reserved.</p>
+	</footer>
+</body>
+</html>

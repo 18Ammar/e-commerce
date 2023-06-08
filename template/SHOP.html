@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRODUCTS</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='aboutStylse.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <style>
+            #slider {
+                display: flex;
+                position: relative;
+                background-color: burlywood;
+                margin-left: 65px;
+                margin-top: 50px;
+                width: 90%;
+                height: 500px;
+                overflow: hidden;
+            }
+            #slider img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            #slider img.active {
+                opacity: 1;
+            }
+        </style>
+
+    <script>
+        $(document).ready(function() {
+        var images = ["{{url_for('static',filename='home1.jpg')}}", "{{url_for('static',filename='home2.jpg')}}", "{{url_for('static',filename='home1.jpg')}}"];
+        var current = 0;
+        var sliderInterval = setInterval(nextSlide, 3000);
+        function nextSlide() {
+            $('#slider img').removeClass('active');
+            current = (current + 1) % images.length;
+            $('#slider img').eq(current).addClass('active');
+        }
+        });
+    </script>
+
+</head>
+
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="/"><i class = "fas fa-home" >Home</i></a></li>
+            <li><a href="/SHOP"><i class = "fas  fa-shopping-basket">Product</i></a></li>
+            <li><a href="/about"><i class = "fas fa-user">About-us</i></a></li>
+            <li><a href="/contact"><i class = "fas fa-phone">Contact</i></a></li>
+        </ul>
+        <a href="/chackout" class="hh"><img class="img-card" src="{{url_for('static',filename='6+cart.png')}}"  alt=""></a>
+
+    </nav>
+    <div class="search-container">
+        <form action="" method="POST">
+            <input type="text" name="qq" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div id="slider">
+        <img class="active" src="{{url_for('static',filename='home2.jpg')}}" alt="slider image">
+        <img src="{{url_for('static',filename='home1.jpg')}}" alt="slider image">
+        <img src="{{url_for('static',filename='home2.jpg')}}" alt="slider image">
+    </div>
+        <div class="container">
+            
+          
+            <h3 class="title"> T-shirt products </h3>
+            <div class="products-container">
+                {% for product in products %}
+                <a href="{{url_for('view',index =product.id )}}">
+                    <div class="product" data-name="{{ product.name }}" data-type="{{ product.category }}">
+                        <img src="{{ url_for('static',filename=product.path) }}">
+                        <h3>{{ product.name }}</h3>
+                        <div class="price">${{ product.price }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-content">
+          <div class="quick-links">
+            <h3>QUICK LINKS</h3>
+            <ul>
+            <li><a href="/"><i class = "fas fa-home" >Home</i></a></li>
+            <li><a href="/SHOP"><i class = "fas  fa-shopping-basket">Product</i></a></li>
+            <li><a href="/about"><i class = "fas fa-user">About-us</i></a></li>
+            <li><a href="/contact"><i class = "fas fa-phone">Contact</i></a></li>
+            </ul>
+          </div>
+          <div class="about-us">
+            <h3>ABOUT US</h3>
+            <p>Our Story + Mission <br>
+                Locations
+                <br>
+                Collaborations
+                <br>
+                Job Openings
+                <br>
+                Interns
+                <br>
+                Blog</p>
+          </div>
+          <div class="sign-up">
+            <h3>SIGN UP AND SAVE</h3>
+            <form>
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-design">
+          <p>&copy; 2023 Example Company. All rights reserved.</p>
+          <p>Designed by <a href="#">Ammar Hani</a></p>
+        </div>
+      </footer>
+</html>

@@ -1,0 +1,107 @@
+
+
+/* Reset default browser styles */
+
+body{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+/* Style the header */
+header {
+background-color: #333;
+padding: 20px;
+}
+
+/* Style the navigation menu */
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+nav li {
+float: left;
+}
+
+nav li a {
+display: block;
+padding: 8px;
+text-decoration: none;
+color: #fff;
+}
+
+nav li a:hover {
+background-color: #222;
+}
+
+nav li a.active {
+background-color: #333;
+color: white;
+}
+
+/* Style the main content area */
+main {
+margin: 20px;
+}
+
+section {
+margin-bottom: 20px;
+}
+
+h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+display: block;
+margin-bottom: 10px;
+padding: 10px;
+width: 50%;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+input[type="submit"] {
+background-color: #333;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-bottom: 10px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #222;
+}
+
+iframe {
+width: 100%;
+height: 450px;
+border: none;
+}
+
+p {
+margin-bottom: 10px;
+}
+
+/* Style the footer */
+footer {
+background-color: #333;
+padding: 10px;
+text-align: center;
+}

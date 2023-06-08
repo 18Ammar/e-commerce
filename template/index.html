@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>marketing</title>
+      
+        <script src="D:\digitalMarketing\Market.py" defer></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='stylse.css')}}">
+      </head>
+      
+      <body>
+        
+        <div class="background-image">
+          <div class="navbar">
+            <div class="icon">
+              <h2 class="logo">Nineveh</h2>
+            </div> 
+      
+            <div class="menu">
+              <i class="fas fa-bars"></i>
+              <ul>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/SHOP">PRODUCTS</a></li>
+                <li><a href="/contact" data-target="add-acount">CONTACT</a></li>
+                
+              </ul>
+            
+            </div>
+            <div class="search">
+              <input class="srch" type="search" placeholder="search">
+              <a href="#">
+                <button class="btn">
+                  <img class="searchimg" src="{{url_for('static' ,filename='search.png')}}" alt="">
+                </button>
+              </a>
+            </div>
+          </div>
+      
+      
+      
+          <div class="content">
+            <h1>Digital Marketing &amp; <br><span>Manufacturing </span><br>Clothes</h1>
+            <p class="par"></p>
+                  
+                  <button class="cn"><a href="/join">JOIN US</a></button>
+                  <form class="form hide" id="add-acount" method="post">
+                        <h2>Login Here</h2>
+                        <input type="email" name="email" placeholder="Enter Email Here">
+                        <input type="password" name="password" placeholder="Enter password Here">
+                        <button class="btnn">Login <a href="#"></a></button>
+                        <p class="link">Don't have an acount<br>
+                        <a href="/regisiter">Sign up here</a></p>
+                        <p class="liw">Log in with</p>
+                        <div class="icon">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                        </form>
+
+
+
+                    </div>
+        </div>
+</div>
+<footer>
+    <div class="footer-content">
+      <div class="quick-links">
+        <h3>QUICK LINKS</h3>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="about-us">
+        <h3>ABOUT US</h3>
+        <p>Our Story + Mission <br>
+            Locations
+            <br>
+            Collaborations
+            <br>
+            Job Openings
+            <br>
+            Interns
+            <br>
+            Blog</p>
+      </div>
+      <div class="sign-up">
+        <h3>SIGN UP AND SAVE</h3>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-design">
+      <p>&copy; 2023 Example Company. All rights reserved.</p>
+      <p>Designed by <a href="#">Ammar Hani</a></p>
+    </div>
+  </footer>
+  
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    
+</body>
+</html>

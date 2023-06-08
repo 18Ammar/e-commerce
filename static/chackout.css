@@ -1,0 +1,206 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0bdbd;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Form styles */
+  form {
+    background-color: #f6f6f6;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  input[type="submit"],
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: #333;
+  }
+  
+  /* Grid styles */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  
+  .col-50 {
+    flex: 50%;
+    padding: 0 10px;
+  }
+  
+  /* Icon styles */
+  .icon-container {
+    margin-bottom: 20px;
+  }
+  
+  .fa {
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .fa:hover {
+    color: #222;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .col-50 {
+      flex: 100%;
+      padding: 0;
+    }
+  }
+
+  .back-btn{
+    width: 40px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .back-btn:hover{
+  background-color: #222;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .quick-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .quick-links li {
+    margin-bottom: 5px;
+  }
+  
+  .quick-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .about-us p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .sign-up form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sign-up input[type="email"] {
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .sign-up button[type="submit"] {
+    background-color: rgb(12, 62, 102);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .footer-design {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .footer-design a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-design a:hover {
+    text-decoration: underline;
+  }
+  
